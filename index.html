@@ -3,36 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Homepage</title>
+  <title>Modern Website</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Хедер -->
   <header class="header">
     <nav class="navbar container">
-      <div class="logo">BrandName</div>
+      <div class="logo">MySite</div>
       <ul class="nav-links">
         <li><a href="#">Головна</a></li>
-        <li><a href="#">Про нас</a></li>
         <li><a href="#">Послуги</a></li>
+        <li><a href="#">Портфоліо</a></li>
         <li><a href="#">Контакти</a></li>
       </ul>
       <button class="btn">Увійти</button>
     </nav>
   </header>
 
-  <main>
-    <section class="hero container">
-      <div class="hero-text">
-        <h1>Ласкаво просимо до нашого сайту</h1>
-        <p>Простий і сучасний лендинг, зроблений лише з HTML та CSS.</p>
-        <button class="btn primary">Дізнатися більше</button>
+  <!-- Герой-блок -->
+  <section class="hero container">
+    <div class="hero-text">
+      <h1>Створимо сучасний сайт для вашого бізнесу</h1>
+      <p>Ми допомагаємо компаніям розвиватися в онлайн-середовищі завдяки професійній веб-розробці.</p>
+      <button class="btn primary">Замовити зараз</button>
+    </div>
+    <div class="hero-image">
+      <img src="images/hero.png" alt="Web Design">
+    </div>
+  </section>
+
+  <!-- Секція послуг -->
+  <section class="services container">
+    <h2>Наші послуги</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="images/service1.png" alt="Розробка">
+        <h3>Веб-розробка</h3>
+        <p>Створюємо сайти будь-якої складності — від лендінгів до інтернет-магазинів.</p>
       </div>
-      <div class="hero-image">
-        <img src="images/hero.png" alt="Hero Image">
+      <div class="card">
+        <img src="images/service2.png" alt="Дизайн">
+        <h3>UI/UX Дизайн</h3>
+        <p>Сучасний і зручний дизайн для вашого бізнесу, що привертає клієнтів.</p>
       </div>
-    </section>
-  </main>
+      <div class="card">
+        <img src="images/service3.png" alt="SEO">
+        <h3>SEO Оптимізація</h3>
+        <p>Ваш сайт буде легко знаходити у пошукових системах.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <p>© 2025 MySite. Всі права захищені.</p>
+  </footer>
 </body>
 </html>
-
