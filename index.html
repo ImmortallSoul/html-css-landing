@@ -2,64 +2,190 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modern Landing Page</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Магазин</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #fff;
+      color: #222;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before, body::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      z-index: -1;
+    }
+
+    body::before {
+      width: 220px;
+      height: 220px;
+      background: rgba(230, 57, 70, 0.15);
+      top: 200px;
+      left: -100px;
+    }
+
+    body::after {
+      width: 320px;
+      height: 320px;
+      background: rgba(230, 57, 70, 0.12);
+      top: 120px;
+      right: -160px;
+    }
+
+    /* Хедер */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 40px;
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    nav {
+      display: flex;
+      gap: 32px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: #E63946;
+    }
+
+    .auth {
+      display: flex;
+      gap: 12px;
+    }
+
+    /* Кнопки */
+    .btn {
+      padding: 12px 24px;
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .btn-primary {
+      background: #E63946;
+      color: #fff;
+      border: none;
+      box-shadow: 0 3px 8px rgba(230,57,70,0.3);
+    }
+    .btn-primary:hover {
+      background: #D62839;
+    }
+    .btn-primary:active {
+      transform: scale(0.97);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #111;
+      border: 2px solid #111;
+    }
+    .btn-secondary:hover {
+      background: #111;
+      color: #fff;
+    }
+    .btn-secondary:active {
+      transform: scale(0.97);
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 80px 40px;
+      gap: 40px;
+    }
+
+    .hero-text {
+      max-width: 500px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: #555;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+    }
+
+    .hero img {
+      max-width: 450px;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      padding: 20px 40px;
+      font-size: 14px;
+      color: #555;
+      border-top: 1px solid #eee;
+      background: #fff;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-  <!-- Хедер -->
-  <header class="header">
-    <nav class="navbar container">
-      <div class="logo">MySite</div>
-      <ul class="nav-links">
-        <li><a href="#">Головна</a></li>
-        <li><a href="#">Послуги</a></li>
-        <li><a href="#">Портфоліо</a></li>
-        <li><a href="#">Контакти</a></li>
-      </ul>
-      <button class="btn">Увійти</button>
-    </nav>
-  </header>
 
-  <!-- Герой-блок -->
-  <section class="hero container">
-    <div class="hero-text">
-      <h1>Створимо сучасний сайт для вашого бізнесу</h1>
-      <p>Ми допомагаємо компаніям розвиватися в онлайн-середовищі завдяки професійній веб-розробці.</p>
-      <button class="btn primary">Замовити зараз</button>
-    </div>
-    <div class="hero-image">
-      <img src="images/hero.png" alt="Web Design">
-    </div>
-  </section>
+<header>
+  <div class="logo">NovaStyle</div>
+  <nav>
+    <a href="#">Головна</a>
+    <a href="#">Каталог</a>
+    <a href="#">Про нас</a>
+    <a href="#">Контакти</a>
+  </nav>
+  <div class="auth">
+    <button class="btn btn-secondary">Увійти</button>
+    <button class="btn btn-primary">Реєстрація</button>
+  </div>
+</header>
 
-  <!-- Секція послуг -->
-  <section class="services container">
-    <h2>Наші послуги</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="images/service1.png" alt="Розробка">
-        <h3>Веб-розробка</h3>
-        <p>Створюємо сайти будь-якої складності — від лендінгів до інтернет-магазинів.</p>
-      </div>
-      <div class="card">
-        <img src="images/service2.png" alt="Дизайн">
-        <h3>UI/UX Дизайн</h3>
-        <p>Сучасний і зручний дизайн для вашого бізнесу, що привертає клієнтів.</p>
-      </div>
-      <div class="card">
-        <img src="images/service3.png" alt="SEO">
-        <h3>SEO Оптимізація</h3>
-        <p>Ваш сайт буде легко знаходити у пошукових системах.</p>
-      </div>
+<section class="hero">
+  <div class="hero-text">
+    <h1>Стильна колекція 2025</h1>
+    <p>Відкрий новий образ з нашими модними новинками. Доставляємо по всій Україні.</p>
+    <div class="hero-buttons">
+      <button class="btn btn-primary">Купити зараз</button>
+      <button class="btn btn-secondary">Переглянути каталог</button>
     </div>
-  </section>
+  </div>
+  <div class="hero-image">
+    <img src="https://images.unsplash.com/photo-1521335629791-ce4aec67dd47?w=800" alt="Модна колекція">
+  </div>
+</section>
 
-  <!-- Футер -->
-  <footer class="footer">
-    <p>© 2025 MySite. Всі права захищені.</p>
-  </footer>
+<footer>
+  © 2025 Мій Магазин. Всі права захищені.
+</footer>
+
 </body>
 </html>
